@@ -36,22 +36,55 @@
 
 
 	&-logo
-		display: block
+		display: flex
+		justify-content: space-between
+		align-items: center
 		width: 290px
+		font-size: 45px
+		color: #fff
 
 		@media (max-width: 1400px)
 			width: 200px
+			font-size: 35px
 
 		@media (max-width: 767px)
 			width: 150px
+			font-size: 26px
 
 		@media (max-width: 575px)
 			margin: 0 auto 20px
 			width: 180px
 
-		img
+		&__image
 			display: block
 			max-width: 100%
+			transition: all 1.5s ease
+
+			@media (max-width: 1400px)
+				width: 65px
+
+			@media (max-width: 575px)
+				width: 50px
+
+		&__text
+			text-align: right
+			padding-left: 0.5em
+
+			.main-text
+				font-size: 1em
+				line-height: 1em
+				text-transform: uppercase
+				font-weight: 700
+				display: block
+
+			.small-text
+				font-weight: 300
+				font-size: 0.75em
+				line-height: 0.75em
+				display: block
+
+		&:hover &__image
+			transform: rotate(360deg)
 
 			
 .headroom--unpinned
