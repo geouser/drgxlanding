@@ -25,7 +25,23 @@ function exist(el){
 
 jQuery(document).ready(function($) {
 
-    $(".header").headroom();
+    function disable_loader(){
+        $('.loader').addClass('disabled');
+    }
+    setTimeout(disable_loader, 4000);
+
+
+
+
+    $('.offer').css('padding-top', $('.header').outerHeight());
+    $(window).on('load resize', function(event) {
+        event.preventDefault();
+        $('.offer').css('padding-top', $('.header').outerHeight());
+    });
+
+
+
+    //$(".header").headroom();
     
     /*---------------------------
                                   ADD CLASS ON SCROLL

@@ -1,7 +1,35 @@
 .btn
-    height: 50px
-    left: 50px
-    display: inline-block  
+    display: inline-block
+    padding: 12px 50px
+    border-radius: 4px
+    color: #fff
+    font-weight: 300
+    border: 0
+    cursor: pointer
+    transition: all 0.3s ease
+
+    &--primary
+        background-color: $primary
+
+        &:hover
+            background-color: $primary-hover
+
+    &--info
+        background-color: $secondary
+
+        &:hover
+            background-color: $secondary-hover
+
+    &--xs
+        padding: 6px 25px
+        font-weight: 400
+
+
+
+
+
+
+
 /* ------------------------------------ */
 /*  SLICK ARROWS  */
 .slick-arrow,
