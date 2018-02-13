@@ -41,6 +41,17 @@ jQuery(document).ready(function($) {
 
 
 
+    for (var i = 0; i <= 25; i++) {
+        var style = Math.floor((Math.random() * 20) + 4);
+        var width = Math.floor((Math.random() * 10) + 4);
+        var top = Math.floor((Math.random() * ($('.offer').outerHeight()-50)) + 50);
+        var left = Math.floor((Math.random() * ($('.offer').outerWidth()-50)) + 50);
+
+        $('.offer').append('<span class="star style-'+style+'" style="top: '+ top +'px; left: '+left+'px; width: '+width+'px; height: '+width+'px"></span>')
+    }
+
+
+
     //$(".header").headroom();
     
     /*---------------------------
