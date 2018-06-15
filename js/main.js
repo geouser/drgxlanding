@@ -180,6 +180,27 @@ jQuery(document).ready(function($) {
     });
 
 
+    
+
+
+    $('.js-mailchimp-form').each(function(index, el) {
+        var form = $(this);
+
+        form.ajaxChimp({
+            url: 'https://online.us17.list-manage.com/subscribe/post?u=b208efabffc40996334e17c12&id=f6454771d8',
+            callback: function(result){
+                if ( result.result == 'error' ) {
+                    var message = result.msg.replace('0 - ', "");
+                    form.find('.alerts').html('<div class="alert alert-danger">'+message+'</div>');
+                } else {
+                    var message = result.msg.replace('0 - ', "");
+                    form.find('.alerts').html('<div class="alert alert-success">'+message+'</div>');
+                    form[0].reset();
+                }
+            }
+        });
+    });
+
 
     /*---------------------------
                                   Google map init
